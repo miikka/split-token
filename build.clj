@@ -1,5 +1,6 @@
 (ns build
-  (:require [clojure.tools.build.api :as b]))
+  (:require [clojure.tools.build.api :as b]
+            [org.corfield.build :as bb]))
 
 (def lib 'miikka/split-token)
 (def version (format "0.1.%s" (b/git-count-revs nil)))
@@ -21,3 +22,6 @@
                :target-dir class-dir})
   (b/jar {:class-dir class-dir
           :jar-file jar-file}))
+
+(defn deploy [_]
+  (bb/deploy {:lib lib, :version version}))

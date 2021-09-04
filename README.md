@@ -74,6 +74,16 @@ bin/kaocha
 bin/kaocha --watch
 ```
 
+Deployment:
+
+```sh
+export CLOJARS_USERNAME=...
+export CLOJARS_PASSWORD=...
+
+clj -T:build jar
+clj -T:build deploy
+```
+
 ## License
 
 Copyright 2021 Miikka Koskinen. Distributed under the terms of ISC license, see `LICENSE`.
