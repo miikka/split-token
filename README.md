@@ -14,7 +14,7 @@ Split tokens improve upon this design. You still generate a random token and sen
 but you store it in the database in two parts called _selector_ and _verifier_. Selector is stored
 as-is and verifier is hashed before saving it.
 
-When the user tries to use a token, you split it and use the selecotr to look up the verifier hash from the database.
+When the user tries to use a token, you split it and use the selector to look up the verifier hash from the database.
 Then you hash the user-supplied verifier and check that it matches the stored hash.
 This achieves two things:
 
