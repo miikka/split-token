@@ -19,7 +19,7 @@ This achieves two things:
 * It prevents [timing attacks]. Typically database lookup is suspectible to timing attacks, but a proper hash comparison is not.
 * An attacker with read access to your token database cannot use the tokens themselves.
 
-This basically the same as why you hash users' passwords with a password hashing function before storing them a database,
+This basically the same as why you hash users' passwords with a password hashing function before storing them in the database,
 except that we have a single randomly-generated token instead of a username and a password.
 
 [generate]: https://quanttype.net/posts/2020-10-18-random-tokens-in-clojure.html
