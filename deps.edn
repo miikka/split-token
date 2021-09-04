@@ -1,3 +1,5 @@
 {:deps {buddy/buddy-core {:mvn/version "1.10.1"}}
  :aliases {:test {:extra-paths ["test"]
-                  :extra-deps {lambdaisland/kaocha {:mvn/version "1.0.887"}}}}}
+                  :extra-deps {lambdaisland/kaocha {:mvn/version "1.0.887"}}}
+           :build {:extra-deps {io.github.clojure/tools.build {:git/tag "v0.2.0" :git/sha "7cbb94b"}}
+                   :ns-default build}}}
