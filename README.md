@@ -11,10 +11,11 @@ send it to your user, usually in a URL, and store it in your database.
 When the user tries to use the token, you check that the token is in the database.
 
 Split tokens improve upon this design. You still generate a random token and send it to your user,
-but you store it in the database in two parts called _selector_ and _verifier_. Selector is stored
-as-is and verifier is hashed before saving it.
+but you store it in the database in two parts called _selector_ and _verifier_.
+Selector is stored as-is and verifier is hashed before saving it.
+The full token _is not_ stored in your database since the verifier is hashed.
 
-When the user tries to use a token, you split it and use the selector to look up the verifier hash from the database.
+When the user wants to use a token, you split it and use the selector to look up the verifier hash from the database.
 Then you hash the user-supplied verifier and check that it matches the stored hash.
 This achieves two things:
 
