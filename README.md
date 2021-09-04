@@ -1,4 +1,4 @@
-# split-tokens
+# split-token
 
 This library implements [split tokens].
 
