@@ -2,6 +2,8 @@
 
 This library implements [split tokens].
 
+[![Clojars Project](https://img.shields.io/clojars/v/net.clojars.miikka/split-token.svg)](https://clojars.org/net.clojars.miikka/split-token)
+
 ## What are split tokens?
 
 A standard way to implement password reset tokens and similar is to [generate a random token][generate],
