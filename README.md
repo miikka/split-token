@@ -7,7 +7,7 @@ This library implements [split tokens].
 ## What are split tokens?
 
 A standard way to implement password reset tokens and similar is to [generate a random token][generate],
-send it to your use, usually in a URL, and store it in your database.
+send it to your user, usually in a URL, and store it in your database.
 When the user tries to use the token, you check that the token is in the database.
 
 Split tokens improve upon this design. You still generate a random token and send it to your user,
