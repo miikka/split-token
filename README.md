@@ -34,7 +34,7 @@ except that we have a single randomly-generated token instead of a username and 
 Generating a token:
 
 ```clojure
- (require '[split-token.core :as split-token])
+(require '[split-token.core :as split-token])
 
 (split-token/generate)
 ;; {:selector "gEHOHXOFanTHp43CbFWdCw",
